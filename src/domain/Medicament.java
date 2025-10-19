@@ -27,16 +27,15 @@ public class Medicament {
 	}
 
 	public Symptom addSymptomByName(String symptom){
-		Symptom s2=null;
-		Symptom s=getSymptomByName(symptom);
-		if (s==null) {
-
-			s2=createSymptom(symptom);
-			symptoms.add(s2);
+		Symptom s=null;
+		s=createSymptom(symptom);
+		if (s!=null) {
+			symptoms.add(s);
 		}
-		return s2;
+		return s;
 
 	}
+	
 	public void removeSymptom(Symptom s){
 		symptoms.remove(s);
 

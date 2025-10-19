@@ -54,11 +54,10 @@ public class Covid19Pacient {
 	}
 	
 	public Symptom addSymptomByName(String symptom, Integer w){
-		Symptom s=getSymptomByName(symptom);
-		if (s==null) {
-			s=createSymptom(symptom); 
+		Symptom s=null;
+		s=createSymptom(symptom); 
+		if (s!=null) 
 			symptoms.put(s,w);		
-		}
 		return s;
 	}
 
